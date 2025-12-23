@@ -7,9 +7,7 @@ from colorama import Fore, Style, init
 
 init(autoreset=True)
 
-# ----------------------------
-# Load resources once
-# ----------------------------
+
 def load_resources():
     with open("intents.json") as file:
         intents = json.load(file)
@@ -31,9 +29,6 @@ def load_resources():
     return model, tokenizer, label_encoder, intent_responses
 
 
-# ----------------------------
-# Predict intent
-# ----------------------------
 def predict_intent(text, model, tokenizer, label_encoder, max_len=20):
     sequence = tokenizer.texts_to_sequences([text])
     padded = keras.preprocessing.sequence.pad_sequences(
@@ -48,9 +43,6 @@ def predict_intent(text, model, tokenizer, label_encoder, max_len=20):
     return tag, confidence
 
 
-# ----------------------------
-# Chat loop
-# ----------------------------
 def chat():
     model, tokenizer, label_encoder, intent_responses = load_resources()
 
@@ -71,7 +63,6 @@ def chat():
                 user_input, model, tokenizer, label_encoder
             )
 
-            # Optional confidence threshold
             if confidence < 0.5:
                 response = "I'm not sure I understood that. Can you rephrase?"
             else:
@@ -84,8 +75,6 @@ def chat():
             break
 
 
-# ----------------------------
-# Run chatbot
-# ----------------------------
 if __name__ == "__main__":
     chat()
+
