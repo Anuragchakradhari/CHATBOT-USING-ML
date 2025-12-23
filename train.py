@@ -12,9 +12,6 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.preprocessing import LabelEncoder
 
-# -----------------------------
-# Load dataset
-# -----------------------------
 with open("intents.json") as file:
     data = json.load(file)
 
@@ -32,15 +29,9 @@ for intent in data["intents"]:
 
 num_classes = len(labels)
 
-# -----------------------------
-# Encode labels
-# -----------------------------
 label_encoder = LabelEncoder()
 training_labels = label_encoder.fit_transform(training_labels)
 
-# -----------------------------
-# Tokenization
-# -----------------------------
 vocab_size = 2000
 embedding_dim = 128
 max_len = 20
@@ -57,9 +48,6 @@ padded_sequences = pad_sequences(
     truncating="post"
 )
 
-# -----------------------------
-# Bi-LSTM + ReLU Model
-# -----------------------------
 model = Sequential([
     Input(shape=(max_len,)),
 
@@ -87,9 +75,6 @@ model = Sequential([
     Dense(num_classes, activation="softmax")
 ])
 
-# -----------------------------
-# Compile
-# -----------------------------
 model.compile(
     optimizer="adam",
     loss="sparse_categorical_crossentropy",
@@ -98,9 +83,6 @@ model.compile(
 
 model.summary()
 
-# -----------------------------
-# Train
-# -----------------------------
 early_stop = EarlyStopping(
     monitor="loss",
     patience=5,
@@ -115,9 +97,6 @@ model.fit(
     callbacks=[early_stop]
 )
 
-# -----------------------------
-# Save model and preprocessors
-# -----------------------------
 model.save("chat_model.keras")
 
 with open("tokenizer.pickle", "wb") as handle:
@@ -127,3 +106,4 @@ with open("label_encoder.pickle", "wb") as handle:
     pickle.dump(label_encoder, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 print("✅ Training complete. Model saved successfully.")
+
