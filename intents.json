@@ -1,0 +1,244 @@
+{
+  "intents": [
+
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hii",
+        "Hello",
+        "Hey",
+        "Hey there",
+        "Hello there",
+        "Good morning",
+        "Good afternoon",
+        "Is anyone there?",
+        "Are you online?",
+        "Can I talk to someone?",
+        "Hello, I need help",
+        "Hi, I have a question",
+        "Hey, can you help me?",
+        "Hello support",
+        "Is support available?",
+        "Can someone assist me?",
+        "Hi, is this the help desk?",
+        "Hello, are you available?",
+        "Hey, I need assistance",
+        "Hi there, I need help",
+        "Good day",
+        "Anyone available right now?",
+        "Hello, I need assistance",
+        "Hi, I’m looking for help",
+        "Hey, is anyone here?",
+        "Hello, can you hear me?",
+        "Good evening",
+        "Hi, I’d like some help",
+        "Hello, I have an issue",
+        "Hey, can I ask something?",
+        "Hi, I want to ask a question",
+        "Hello, I need support",
+        "Hi, are you active?",
+        "Hey, are you available?",
+        "Hello, can I get help?",
+        "Hi, I’m here for assistance",
+        "Hello, is anyone listening?",
+        "Hey, I need some help",
+        "Hi, quick question",
+        "Hello, just checking in"
+      ],
+      "responses": [
+        "Hello! How can I help you?",
+        "Hi there! What can I do for you?",
+        "Hey! How may I assist you?"
+      ]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "See ya",
+        "Talk to you later",
+        "Catch you later",
+        "Take care",
+        "I have to go now",
+        "I’m leaving now",
+        "That’s all for now",
+        "Thanks, bye",
+        "See you soon",
+        "I’ll talk to you later",
+        "Ending the chat now",
+        "Goodbye for now",
+        "I need to go",
+        "See you next time",
+        "I’m done, bye",
+        "Thanks, see you",
+        "Have a good day, bye"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later!",
+        "Bye! Feel free to come back anytime."
+      ]
+    },
+
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Thanks a lot",
+        "Thank you very much",
+        "Thanks for the help",
+        "I appreciate it",
+        "Much appreciated",
+        "Thanks, that helps",
+        "Thanks for your support",
+        "I really appreciate your help",
+        "Thank you so much",
+        "That was helpful, thanks",
+        "Thanks for assisting me",
+        "I’m grateful for the help",
+        "Thanks, you helped me",
+        "Appreciate your assistance",
+        "Thanks, that solved my issue",
+        "Thank you for the information",
+        "Thanks, I understand now",
+        "Many thanks"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "Any time! Let me know if you need anything else."
+      ]
+    },
+
+    {
+      "tag": "about",
+      "patterns": [
+        "Who are you?",
+        "What are you?",
+        "What do you do?",
+        "What is your purpose?",
+        "Tell me about yourself",
+        "Who am I chatting with?",
+        "Are you a real person?",
+        "What kind of bot are you?",
+        "Can you explain who you are?",
+        "What is your role?",
+        "What are you designed for?",
+        "Are you an AI?",
+        "What services do you provide?",
+        "What is your function?",
+        "Can you introduce yourself?"
+      ],
+      "responses": [
+        "I'm Joana, your virtual assistant.",
+        "I'm Joana, an AI chatbot here to help you."
+      ]
+    },
+
+    {
+      "tag": "name",
+      "patterns": [
+        "What is your name?",
+        "What's your name?",
+        "Who am I talking to?",
+        "May I know your name?",
+        "What should I call you?",
+        "Do you have a name?",
+        "Can you tell me your name?",
+        "Who are you called?",
+        "What do people call you?",
+        "How should I address you?"
+      ],
+      "responses": [
+        "You can call me Joana.",
+        "I'm Joana!"
+      ]
+    },
+
+    {
+      "tag": "help",
+      "patterns": [
+        "Can you help me?",
+        "I need help",
+        "I need assistance",
+        "How can you help me?",
+        "What can you do for me?",
+        "I need support",
+        "Can you assist me?",
+        "Help me with something",
+        "I’m having trouble",
+        "I need guidance",
+        "Can you support me?",
+        "I need help with an issue",
+        "Could you help me out?",
+        "I’m stuck and need help",
+        "Is there someone who can help me?",
+        "I need assistance right now",
+        "Please help me",
+        "I need help understanding something",
+        "Can you guide me?",
+        "I need your help"
+      ],
+      "responses": [
+        "Sure! How can I help you?",
+        "Tell me what you need assistance with."
+      ]
+    },
+
+    {
+      "tag": "createaccount",
+      "patterns": [
+        "I want to create an account",
+        "How do I create a new account?",
+        "I need to sign up",
+        "How can I register?",
+        "Create a new account",
+        "Sign up for an account",
+        "I want to register",
+        "How do I open an account?",
+        "Can I create an account here?",
+        "I need to make a new account",
+        "What is the signup process?",
+        "How do I get started with an account?",
+        "I want to open a new account",
+        "Help me create an account",
+        "Where can I register?"
+      ],
+      "responses": [
+        "You can create a new account on our website.",
+        "Please visit our website to sign up."
+      ]
+    },
+
+    {
+      "tag": "complaint",
+      "patterns": [
+        "I want to file a complaint",
+        "I have a complaint",
+        "I want to complain about a service",
+        "There is an issue with the service",
+        "I need to raise a complaint",
+        "How can I report a problem?",
+        "I am unhappy with the service",
+        "I want to report an issue",
+        "I have a problem with your service",
+        "Something is not working properly",
+        "I'm facing an issue",
+        "I want to report a complaint",
+        "I need to complain",
+        "There's a problem I want to report",
+        "I want to raise an issue"
+      ],
+      "responses": [
+        "Please describe your complaint so I can assist you.",
+        "We're sorry for the inconvenience. Please tell us the issue."
+      ]
+    }
+
+  ]
+}
